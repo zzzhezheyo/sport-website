@@ -1,7 +1,7 @@
 //业务逻辑
 require(["./requirejs.config"], () => {
 	require(["jquery", "det", "url", "header","footer","cookie"], ($, item, url) => {
-		item.init(url.baseUrlRap+"/detail");
+		item.init(url.baseUrlRap+"/detail_one");
 		$(function(){
 			//获取当前的路径
 			var localUrl = decodeURI(document.location.href);

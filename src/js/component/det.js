@@ -16,16 +16,31 @@ define(["jquery", "template"], ($, template) => {
 			$.ajax({
 				url: url,
 				type: "get",
+				// success: function(res){
+				// 	console.log(res);
+				// 	if(res.res_code === 1){
+				// 		let list = res.res_body.data;
+				// 		//通过模板引擎渲染结构
+				// 		let html = template("detail-template", {list: res.res_body.data});
+						
+				// 		$(".list-item ul").html(html);
+				// 	}
+				// }
+
 				success: function(res){
 					console.log(res);
+					res.res_body.data.map(item => {
+						let imgpath = item.img[0].path+item.img[0].url+item.img[0].path2
+						item.img = imgpath
+						return item
+					})
+					console.log(res.res_body.data,"略略略")
 					if(res.res_code === 1){
 						let list = res.res_body.data;
+						console.log(list)
 						//通过模板引擎渲染结构
 						let html = template("detail-template", {list: res.res_body.data});
-						
 						$(".list-item ul").html(html);
-
-
 					}
 				}
 			})
