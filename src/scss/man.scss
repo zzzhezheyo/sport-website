@@ -107,9 +107,15 @@ ul li a{text-decoration: none;}
 	li h3{
 		font-size:14px;
 		margin:15px 0;
+		a{
+			background:url("");
+			height:20px;
+			color:#000;
+		}
 	}
 	li p{
 		font-size:12px;
+		margin-top:50px;
 		color:#666;
 	}
 }

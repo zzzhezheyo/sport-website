@@ -28,6 +28,10 @@ html,body{
 	margin-right: 10px;
 	line-height: 38px;
 }
+.inner .top .tright .userout{
+	color:red;
+	padding-left: 10px;
+}
 .inner .top .tright li{
 	float: left;
 	padding-right: 24px;

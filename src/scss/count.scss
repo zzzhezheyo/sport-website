@@ -1,0 +1,21 @@
+@import "./component/style.scss";
+@import "./component/header.scss";
+@import "./component/footer.scss";
+
+*{
+	margin:0;
+	padding:0;
+}
+ul li{list-style:none;}
+ul li a{text-decoration: none;}
+
+.pay{
+	width:1000px;
+	margin-left:200px;
+	text-align:center;
+	height:500px;
+	li{
+		margin-left:100px;
+		float:left;
+	}
+}

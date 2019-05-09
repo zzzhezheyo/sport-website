@@ -34,6 +34,11 @@ html,body{
 	float: right;
 	margin-right: 10px;
 	line-height: 38px;
+	.userout{
+		color:red;
+		padding-left: 10px;
+		cursor: pointer
+	}
 }
 .inner .top .tright li{
 	float: left;

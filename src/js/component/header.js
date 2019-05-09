@@ -2,6 +2,7 @@ define(["jquery","cookie"], () => {
 	class Header{
 		constructor(){
 			this.init();
+			this.star();
 		}
 		init(){
 			//加载header.html
@@ -11,7 +12,7 @@ define(["jquery","cookie"], () => {
 				})
 			}).then(() => {
 				this.nav();
-				this.star();
+				// this.star();
 			})
 		}
 		nav(){
@@ -19,20 +20,18 @@ define(["jquery","cookie"], () => {
 			// var arr=[];
 			if($.cookie("username")){
 				var arr = $.cookie("username");
-				$("#user").html("欢迎您！"+arr+" ");
-				// $("#out").html("tuichu");
-				// $("#out").on("click",function(e){
-				// 	e=e||event;
-				// 	var target = e.target || e.srcElement;
-				// 	console.log("texxt");
-				// 	$.cookie("username","",{expires=-1,'path':'/'});
-				// })
+				$("#user").html("欢迎您！"+arr+" "+'<span class="userout">退出</span>');
+				$(".userout").on("click",function(e){
+					e=e||event;
+					var target = e.target || e.srcElement;
+					console.log($.cookie("username"));
+					// $.cookie("username",null);
+					$.cookie("username",null,{expires=-10,'path':'/'});
+					window.history.go(0);
+				})
 			}else{
 				var arr = [];
 			}
-    		// var arr=$.cookie("username")?($.cookie("username")):[];
-    		// console.log(arr);
-    		// $("#user").html("欢迎您！"+arr);
 		    $(document).on('scroll',function(){
 		      if($(document).scrollTop() > titleTop){
 		         $('.inner').css({
@@ -50,18 +49,13 @@ define(["jquery","cookie"], () => {
 		}
 
 		star(){
-			$("#ho1").hover(function(){
+			$("#ho1").onmouseenter(function(){
 				$(".second").css("display","block");
-			},function(){
-				$(".second").css("display","none");
 			})
-			$("#ho2").hover(function(){
+			$("#ho2").onmouseenter(function(){
 				$(".second").css("display","block");
-			},function(){
-				$(".second").css("display","none");
 			})
 		}
-
 		
 	}
 	return new Header();

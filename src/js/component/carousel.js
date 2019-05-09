@@ -70,7 +70,7 @@ define(["jquery"], () => {
 						}else{
 							$ul.stop().animate({left: -index*liWidth});
 						}
-						console.log(index);
+						// console.log(index);
 						btns[index].addClass("ac");
 					})
 

@@ -14,7 +14,7 @@ require(["./requirejs.config"], () => {
 				console.log(wname);
 
 				//正则验证
-				var reg =/\w/;
+				var reg =/^[a-zA-Z0-9]{2,6}$/;
 				var reg1 =/^.{6,}$/;
 				var reg2 = /^1\d{10}/;
 				console.log("text");
@@ -71,8 +71,6 @@ require(["./requirejs.config"], () => {
 						dataType: "json"
 					})	
 				}
-
-				
 				return false;
 			})
 		})
