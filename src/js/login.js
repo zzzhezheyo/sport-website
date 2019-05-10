@@ -26,6 +26,8 @@ require(["./requirejs.config"], () => {
 							if(confirm("登录成功，去首页")){
 								window.location.href = "/index.html";
 							}
+						}else{
+							alert("账号或者密码错误");
 						}
 					},
 					dataType: "json"

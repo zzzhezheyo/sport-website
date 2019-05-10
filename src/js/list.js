@@ -4,6 +4,7 @@ require(["./requirejs.config"], () => {
 		$(function(){
 			$(".shoe").on("click",function(){
 				$(".secondlist").show();
+				 $('.shoe').removeClass().addClass("shoe_hiden");
 			})
 		})
 	})

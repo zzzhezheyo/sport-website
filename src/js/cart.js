@@ -126,9 +126,9 @@
 		 				// preDom: $(trNum[i]).find(".priceDom").html();
 		 			};
 		 			newArr.push(obj);
-		 			console.log(obj);
+		 			// console.log(obj);
 		 		}
-		 		$("#money").html(allSum);
+		 		$("#money").html(allSum.toFixed(2));
 		 		$.cookie("cart",JSON.stringify(newArr),{path:'/'});
 		 	}
 

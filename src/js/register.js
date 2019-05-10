@@ -60,7 +60,7 @@ require(["./requirejs.config"], () => {
 							password: wpwd
 						},
 						success: function(res){
-							console.log("t666");
+							// console.log("t666");
 							if(res.res_code ===1){
 								alert("注册成功，马上去登录");
 								location.href = "/html/login.html";
